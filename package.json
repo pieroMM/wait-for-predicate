@@ -1,0 +1,13 @@
+{
+  "name": "wait-for-predicate",
+  "version": "0.0.0_beta",
+  "type": "module",
+  "description": "A function which resolves a promise when a given predicate becomes true",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./src/tests/wait-for-predicate.spec.js"
+  },
+  "keywords": [],
+  "author": "https://github.com/pieroMM",
+  "license": "MIT"
+}

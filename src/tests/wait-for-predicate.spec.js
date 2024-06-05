@@ -70,7 +70,7 @@ describe('testing waitForPredicate function', async () => {
     await it('predicate is true after 5 seconds, providing no millisecondsStep', async () => {
         let exit = false;
         const predicate = mock.fn(() => !!exit);
-        setTimeout(() => { exit = true}, 5000);
+        setTimeout(() => { exit = true }, 5000);
         await waitForPredicate(predicate, { timeout: 10000 });
         assert.ok(predicate.mock.calls?.length <= 5);
     });

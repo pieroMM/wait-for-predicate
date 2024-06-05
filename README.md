@@ -14,7 +14,7 @@ import { waitForPredicate, TIMEOUT_EXPIRED } from 'wait-for-predicate';
 let exit = false;
 const predicate = () => !!exit;
 try {
-    setTimeout(() => { exit = true}, 5000);
+    setTimeout(() => { exit = true }, 5000);
     await waitForPredicate(predicate, { timeout: 3000 });
 } catch(error) {
     if (error.message, TIMEOUT_EXPIRED) {

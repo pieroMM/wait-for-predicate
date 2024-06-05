@@ -9,7 +9,7 @@ import * as assert from 'node:assert'
 export const TIMEOUT_EXPIRED = 'timeoutExpired';
 
 /**
- * Waits for given predicate within a specified time interval
+ * Waits for a given predicate within a specified time interval
  *
  * @param {(...args: any[]) => boolean} predicate - the predicate to waiting for
  * @param {WaitForPredicateOptions} options - settings for timeout and evaluation time step

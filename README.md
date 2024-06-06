@@ -3,7 +3,7 @@ A function which resolves a promise whether a given predicate becomes true.
 ## Installation
 
 ```bash
-
+npm i wait-for-predicate
 ```
 
 ## Usage

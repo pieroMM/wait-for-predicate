@@ -67,7 +67,7 @@ describe('testing waitForPredicate function validation', async () => {
 
 describe('testing waitForPredicate function', async () => {
 
-    await it('predicate is true after 5 seconds, providing no millisecondsStep', async () => {
+    await it('predicate is true after 5 seconds, providing no step', async () => {
         let exit = false;
         const predicate = mock.fn(() => !!exit);
         setTimeout(() => { exit = true }, 5000);
@@ -75,7 +75,7 @@ describe('testing waitForPredicate function', async () => {
         assert.ok(predicate.mock.calls?.length <= 5);
     });
 
-    await it('predicate is true after 5 seconds, providing millisecondsStep', async () => {
+    await it('predicate is true after 5 seconds, providing step', async () => {
         let exit = false;
         const predicate = mock.fn(() => !!exit);
         setTimeout(() => { exit = true}, 5000);
@@ -95,7 +95,7 @@ describe('testing waitForPredicate function', async () => {
         }
     });
 
-    await it('timeout after at least 5 iterations, providing no millisecondsStep', async () => {
+    await it('timeout after at least 5 iterations, providing no step', async () => {
         const predicate = mock.fn(() => false);
         try {
             await waitForPredicate(predicate, { timeout: 5000 });
@@ -105,7 +105,7 @@ describe('testing waitForPredicate function', async () => {
         }
     });
 
-    await it('timeout after at least 11 iterations, providing millisecondsStep', async () => {
+    await it('timeout after at least 11 iterations, providing step', async () => {
         const predicate = mock.fn(() => false);
         try {
             await waitForPredicate(predicate, { timeout: 5000, step: 500});

@@ -17,7 +17,7 @@ try {
     setTimeout(() => { exit = true }, 5000);
     await waitForPredicate(predicate, { timeout: 3000 });
 } catch(error) {
-    if (error.message, TIMEOUT_EXPIRED) {
+    if (error.message === TIMEOUT_EXPIRED) {
         console.error(TIMEOUT_EXPIRED);
     }
     throw error;

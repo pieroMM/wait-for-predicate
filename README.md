@@ -24,4 +24,4 @@ try {
 }
 ```
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[ISC](http://opensource.org/licenses/ISC)

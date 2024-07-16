@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "https://github.com/pieroMM",
-  "license": "ISC",
-  "publishConfig": {
-    "registry": "https://github.com/pieroMM/wait-for-predicate"
-  }
+  "license": "ISC"
 }

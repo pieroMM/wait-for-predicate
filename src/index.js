@@ -1,1 +1,6 @@
-export { waitForPredicate, TIMEOUT_EXPIRED } from './wait-for-predicate.mjs'
+const { waitForPredicate, TIMEOUT_EXPIRED } = require( "./wait-for-predicate.cjs");
+
+module.exports = {
+    waitForPredicate,
+    TIMEOUT_EXPIRED
+}

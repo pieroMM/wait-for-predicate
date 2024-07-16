@@ -1,12 +1,12 @@
-import {setInterval} from "node:timers";
-import * as assert from 'node:assert'
+const {setInterval} = require("node:timers");
+const assert = require("node:assert");
 
 /** @typedef {Object} WaitForPredicateOptions
  * @property {number} timeout
  * @prop {number} [step=1000]
  */
 
-export const TIMEOUT_EXPIRED = 'timeoutExpired';
+const TIMEOUT_EXPIRED = "timeoutExpired";
 
 /**
  * Waits for a given predicate within a specified time interval
@@ -15,7 +15,7 @@ export const TIMEOUT_EXPIRED = 'timeoutExpired';
  * @param {WaitForPredicateOptions} options - settings for timeout and evaluation time step
  * @returns {Promise<void>}
  */
-export const waitForPredicate = (predicate, options) => new Promise((resolve, reject) => {
+const waitForPredicate = (predicate, options) => new Promise((resolve, reject) => {
 
     const {timeout} = options;
     const step = options.step ?? 1000;
@@ -39,4 +39,9 @@ export const waitForPredicate = (predicate, options) => new Promise((resolve, re
         timeAcc+= step;
     }, step)
 });
+
+module.exports = {
+    TIMEOUT_EXPIRED,
+    waitForPredicate
+};
 

@@ -1,7 +1,6 @@
 {
   "name": "wait-for-predicate",
-  "version": "0.2.1",
-  "type": "module",
+  "version": "0.3.0",
   "description": "A function which resolves a promise when a given predicate becomes true",
   "main": "./src/index.js",
   "scripts": {
@@ -9,5 +8,8 @@
   },
   "keywords": [],
   "author": "https://github.com/pieroMM",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://github.com/pieroMM/wait-for-predicate"
+  }
 }

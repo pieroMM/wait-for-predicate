@@ -9,7 +9,7 @@ npm i wait-for-predicate
 ## Usage
 
 ```javascript
-import { waitForPredicate, TIMEOUT_EXPIRED } from 'wait-for-predicate';
+const { waitForPredicate, TIMEOUT_EXPIRED } = require("wait-for-predicate");
 
 let exit = false;
 const predicate = () => !!exit;
